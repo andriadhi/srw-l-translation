@@ -1,0 +1,43 @@
+name: A copy found elsewhere
+description: Point to a copy of this translation that is hosted or offered somewhere other than this site.
+title: "[copy] "
+labels: ["patch-misuse"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a pointer, not a complaint. Post the link and I will look at it myself.
+
+        **Do not name anyone.** Do not accuse anyone. Do not discuss what should happen to
+        whoever posted it. A link is all that is needed, and anything else written here stays
+        public permanently.
+
+        I would rather hear about a copy early than find out about it a year later.
+
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: The address where the copy is being hosted or offered.
+      placeholder: https://
+    validations:
+      required: true
+
+  - type: textarea
+    id: anything
+    attributes:
+      label: Anything else (optional)
+      description: Only if it helps me understand what I am looking at. Leave it blank if not.
+      placeholder: The page also links to a paid download.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you post
+      options:
+        - label: This issue contains no names and no accusations.
+          required: true
+        - label: This issue contains no ROM files or archives.
+          required: true

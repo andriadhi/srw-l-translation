@@ -1,0 +1,23 @@
+{
+  "name": "srw-l-translation",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Super Robot Wars L — English translation. Web patcher and project page.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "node scripts/check-content.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "hash-wasm": "^4.12.0",
+    "typescript": "^5.7.0",
+    "vite": "^7.0.0",
+    "vitest": "^5.1.0"
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "asOf": "2026-10-23",
+  "source": "Project owner’s translation records, 2026-10-23.",
+  "note": "null = kategori belum terhitung, bukan 0%. Angka antar baris tidak boleh dirata-ratakan.",
+  "items": [
+    {
+      "id": "1",
+      "label": "UI elements",
+      "translated": null,
+      "inGame": null,
+      "scope": "Complete visible-UI denominator has not been established."
+    },
+    {
+      "id": "2",
+      "label": "Unit names",
+      "translated": 100,
+      "inGame": 100
+    },
+    {
+      "id": "3",
+      "label": "Character names",
+      "translated": 100,
+      "inGame": 100
+    },
+    {
+      "id": "4a",
+      "label": "Skill & ability names",
+      "translated": 100,
+      "inGame": 100
+    },
+    {
+      "id": "4b",
+      "label": "Item names",
+      "translated": null,
+      "inGame": null,
+      "scope": "Complete item-name inventory is unknown; reward-item level-up fields remain Japanese."
+    },
+    {
+      "id": "5",
+      "label": "Story dialogue",
+      "translated": 100,
+      "inGame": 100
+    },
+    {
+      "id": "6",
+      "label": "Battle dialogue",
+      "translated": 100,
+      "inGame": 0
+    },
+    {
+      "id": "7",
+      "label": "Mission conditions",
+      "translated": 100,
+      "inGame": 100
+    },
+    {
+      "id": "8",
+      "label": "Image-based text",
+      "translated": null,
+      "inGame": null,
+      "scope": "No translated graphic replacement recorded yet; visible-text inventory incomplete."
+    },
+    {
+      "id": "9",
+      "label": "Weapon & attack names",
+      "translated": 100,
+      "inGame": 100
+    },
+    {
+      "id": "10",
+      "label": "Chapter & route titles",
+      "translated": 100,
+      "inGame": 100
+    },
+    {
+      "id": "11",
+      "label": "Skill, ability, effect & bonus descriptions",
+      "translated": 100,
+      "inGame": 100
+    },
+    {
+      "id": "12",
+      "label": "Terrain labels",
+      "translated": 100,
+      "inGame": 100
+    },
+    {
+      "id": "13",
+      "label": "Music titles & BGM options",
+      "translated": 100,
+      "inGame": 100
+    }
+  ]
+}

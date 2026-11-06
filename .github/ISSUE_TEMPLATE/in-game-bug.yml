@@ -1,0 +1,79 @@
+name: In-game bug
+description: The patched ROM runs, but something in the game is wrong.
+title: "[in game] "
+labels: ["in-game-bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Most problems on DS come from the emulator, not the translation. Two reports about the
+        same scene, one on a patched ROM and one on the original Japanese ROM, tell me almost
+        everything. If you can check the same moment in the original, say so below.
+
+  - type: input
+    id: build
+    attributes:
+      label: Which build of the translation?
+      placeholder: version 0
+    validations:
+      required: true
+
+  - type: input
+    id: emulator
+    attributes:
+      label: Emulator or hardware, and version
+      description: Required. A report without this cannot be acted on.
+      placeholder: melonDS 1.0.1 on Windows, or a DS Lite with a flashcart
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Where in the game?
+      placeholder: Chapter 14, intermission, unit list
+    validations:
+      required: true
+
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happens?
+      placeholder: The skill description runs past the edge of the box.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should happen?
+      placeholder: It should wrap onto a second line.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: original
+    attributes:
+      label: Does the same thing happen on the original Japanese ROM?
+      options:
+        - "No, the original is fine"
+        - "Yes, the original does it too"
+        - I have not checked
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshot or short video (optional)
+      description: Drag an image here. Do not attach a ROM or a save file.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you post
+      options:
+        - label: I have not attached a ROM file or a save file to this issue.
+          required: true

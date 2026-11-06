@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Super Robot Wars L — Translation Project</title>
+  <meta name="description" content="English translation of Super Robot Wars L for Nintendo DS. Patch your own clean ROM in your browser. Nothing is uploaded.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Super Robot Wars L — Translation Project">
+  <meta property="og:description" content="Patch your own clean ROM in your browser. Nothing is uploaded.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+</head>
+<body>
+
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<div class="rail">
+  <div class="dot"></div>
+  <div class="vl">Super Robot Wars L · Translation Project</div>
+  <div class="dot" style="opacity:.3"></div>
+</div>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-l">
+      <div class="eyebrow"><i></i>Japanese → English</div>
+      <h1>Super Robot Wars L<span class="l2">Translation Project</span></h1>
+      <div class="cta-row">
+        <a href="patch/" class="btn">Select ROM file <span class="arr">↓</span></a>
+        <div class="btn-meta">No patch released yet</div>
+      </div>
+    </div>
+    <div class="hero-r">
+      <div class="screen-wrap">
+        <span class="float-tag ft1">Patched build</span>
+        <img src="shots/cover.jpg" width="958" height="720"
+             alt="Screenshot of the English translation running in the game.">
+        <span class="float-tag ft2">Japanese → English</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="carousel" id="shots">
+    <div class="seg-head">
+      <div class="t">
+        <h2>Screen shots</h2>
+        <p>A few screenshots showing the translated text in-game</p>
+      </div>
+      <div class="counter"><b id="cur">01</b> / 06</div>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="stage">
+        <div class="track" id="track">
+          <figure class="sl on" data-i="0"><img src="shots/05.png" alt="Translated in-game screenshot 1"></figure>
+          <figure class="sl" data-i="1"><img src="shots/01.png" alt="Translated in-game screenshot 2"></figure>
+          <figure class="sl" data-i="2"><img src="shots/07.png" alt="Translated in-game screenshot 3"></figure>
+          <figure class="sl" data-i="3"><img src="shots/09.png" alt="Translated in-game screenshot 4"></figure>
+          <figure class="sl" data-i="4"><img src="shots/03.png" alt="Translated in-game screenshot 5"></figure>
+          <figure class="sl" data-i="5"><img src="shots/10.png" alt="Translated in-game screenshot 6"></figure>
+        </div>
+        <button class="nav prev" id="prev" aria-label="Previous screenshot">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="nav next" id="next" aria-label="Next screenshot">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+
+      <div class="thumbs" id="thumbs">
+        <button class="th on" data-i="0" aria-label="Show screenshot 1"><img src="shots/05.png" alt=""></button>
+        <button class="th" data-i="1" aria-label="Show screenshot 2"><img src="shots/01.png" alt=""></button>
+        <button class="th" data-i="2" aria-label="Show screenshot 3"><img src="shots/07.png" alt=""></button>
+        <button class="th" data-i="3" aria-label="Show screenshot 4"><img src="shots/09.png" alt=""></button>
+        <button class="th" data-i="4" aria-label="Show screenshot 5"><img src="shots/03.png" alt=""></button>
+        <button class="th" data-i="5" aria-label="Show screenshot 6"><img src="shots/10.png" alt=""></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="progress" id="progress">
+    <div class="seg-head">
+      <div class="t">
+        <h2>Translation <span class="accent">Progress</span></h2>
+        <p>While most of the text is translated, inserting it into the game is a separate process
+          entirely. Every line that's officially added to the game has been tested first to make
+          sure there are no issues.</p>
+      </div>
+    </div>
+
+    <div class="psum">
+      <div><div class="n">11<span> / 11</span></div>
+        <div class="l">Counted categories<br>reached 100%</div></div>
+      <div><div class="n">10<span> / 11</span></div>
+        <div class="l">In game<br>reached 100%</div></div>
+      <div><div class="n a">1<span> gap</span></div>
+        <div class="l">Translated but<br>not yet shipped</div></div>
+    </div>
+
+    <div class="prow-h">
+      <div>#</div><div>Content</div><div>Translated</div><div>In game</div>
+    </div>
+    <table>
+      <tbody>
+        <tr class="todo"> <td class="idx">1</td> <td class="lab">UI elements</td> <td class="col na" title="Complete visible-UI denominator has not been established"><div class="mv na-v"><span>Not counted</span></div></td> <td class="col na" title="Complete visible-UI denominator has not been established"><div class="mv na-v"><span>Not counted</span></div></td> </tr>
+        <tr class="ok">
+          <td class="idx">2</td>
+          <td class="lab">Unit names</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+        </tr>
+        <tr class="ok">
+          <td class="idx">3</td>
+          <td class="lab">Character names</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+        </tr>
+        <tr class="ok">
+          <td class="idx">4a</td>
+          <td class="lab">Skill &amp; ability names</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+        </tr>
+        <tr class="todo"> <td class="idx">4b</td> <td class="lab">Item names</td> <td class="col na" title="Complete item-name inventory is unknown"><div class="mv na-v"><span>Not counted</span></div></td> <td class="col na" title="Complete item-name inventory is unknown"><div class="mv na-v"><span>Not counted</span></div></td> </tr>
+        <tr class="ok">
+          <td class="idx">5</td>
+          <td class="lab">Story dialogue</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+        </tr>
+        <tr class="gap">
+          <td class="idx">6</td>
+          <td class="lab">Battle dialogue</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>0%</span><i><b style="width:0%"></b></i></div></td>
+        </tr>
+        <tr class="ok">
+          <td class="idx">7</td>
+          <td class="lab">Mission conditions</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+        </tr>
+        <tr class="todo"> <td class="idx">8</td> <td class="lab">Image-based text</td> <td class="col na" title="No translated graphic replacement recorded yet"><div class="mv na-v"><span>Not counted</span></div></td> <td class="col na" title="No translated graphic replacement recorded yet"><div class="mv na-v"><span>Not counted</span></div></td> </tr>
+        <tr class="ok">
+          <td class="idx">9</td>
+          <td class="lab">Weapon &amp; attack names</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+        </tr>
+        <tr class="ok">
+          <td class="idx">10</td>
+          <td class="lab">Chapter &amp; route titles</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+        </tr>
+        <tr class="ok">
+          <td class="idx">11</td>
+          <td class="lab">Skill, ability, effect &amp; bonus descriptions</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+        </tr>
+        <tr class="ok">
+          <td class="idx">12</td>
+          <td class="lab">Terrain labels</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+        </tr>
+        <tr class="ok">
+          <td class="idx">13</td>
+          <td class="lab">Music titles &amp; BGM options</td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+          <td class="col"><div class="mv"><span>100%</span><i><b style="width:100%"></b></i></div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="legend">
+      <span><i style="background:var(--teal)"></i>Translated &amp; shipped</span>
+      <span><i style="background:var(--amber)"></i>Translated, not in build yet</span>
+      <span><i style="background:var(--mute)"></i>Not started</span>
+      <span><i style="background:none;border:1px dashed var(--mute)"></i>Not counted yet</span>
+    </div>
+  </section>
+
+  <div class="rshell">
+  <section class="seg seg-release">
+    <div class="rhead">
+      <div>
+        <h2>Release <span class="accent">history</span></h2>
+      </div>
+      <div class="seg-tag">Latest: <span id="verTag">none</span></div>
+    </div>
+
+    <div id="releaseBody">
+      <div class="empty-credits" style="border-style:dashed">
+        <b>No patch released yet</b>
+        <span>The first build is still in progress. Version numbers and the changelog
+          appear here once a patch is published.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="seg seg-guide">
+    <div class="rhead">
+      <div>
+        <h2>How to <span class="accent">use it</span></h2>
+      </div>
+      <div class="seg-tag">No install · no account</div>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <div class="n"></div>
+        <div>
+          <b>Get a clean Japanese ROM</b>
+          <p>Super Robot Wars L for Nintendo DS, Japanese region, never patched before.
+            This site does not provide or link to ROMs — you need your own copy.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="n"></div>
+        <div>
+          <b>Open the patcher and choose it</b>
+          <p>Press <b>Patch ROM</b> to open the patcher on its own page, then drag the file in
+            or pick it from your device. Nothing is uploaded — the file is read on your own
+            device and never leaves it.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="n"></div>
+        <div>
+          <b>Wait for the check</b>
+          <p>The page confirms the file is the exact ROM this patch supports. If it isn't,
+            you get a specific reason and what to do, not a generic error.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="n"></div>
+        <div>
+          <b>Patch and download</b>
+          <p>Press <code>Patch ROM</code>. When it finishes, the file is verified and handed
+            to you as a download. Keep it somewhere safe.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq">
+      <h3>Questions</h3>
+
+      <details>
+        <summary>Is my ROM uploaded anywhere?</summary>
+        <div class="ans">
+          No. The file is read on your device by your browser and never leaves it. Nothing you
+          open on this page is sent anywhere. Not your ROM, not the file you get back.
+        </div>
+      </details>
+
+      <details>
+        <summary>Which ROM do I need?</summary>
+        <div class="ans">
+          The Japanese release of <b>Super Robot Wars L</b> for Nintendo DS, unmodified. Other
+          regions, other versions, or a ROM that has already been patched will be rejected with
+          a specific message explaining why.
+        </div>
+      </details>
+
+      <details>
+        <summary>What does "in game" mean in the progress table?</summary>
+        <div class="ans">
+          Text can be translated and still not appear in the game. It has to be inserted and
+          then tested. <b>Translated</b> is how much of the text is written.
+          <b>In game</b> is how much has been inserted and verified inside a playable build.
+          A gap between the two means the work exists but isn't shipped yet.
+        </div>
+      </details>
+
+      <details>
+        <summary>Something failed. What do I do?</summary>
+        <div class="ans">
+          Each failure shows a specific reason and the next step. Most come down to the wrong
+          file, a broken download, or not enough free memory. If the same version keeps failing
+          for you, <a href="https://github.com/andriadhi/srw-l-translation/issues/new/choose" rel="noopener">report it with the code shown</a>.
+        </div>
+      </details>
+
+      <details>
+        <summary>Do I need this site again after patching?</summary>
+        <div class="ans">
+          No. The patched file is complete and self-contained. Keep it. If you lose it, your
+          original ROM can always be patched again with the same process.
+        </div>
+      </details>
+
+      <details>
+        <summary>Will my save still work?</summary>
+        <div class="ans">
+          Yes. In every test so far, an existing save has loaded normally, including saves made
+          on the original Japanese ROM. The translation replaces text, not save structure.
+          <br><br>
+          Back it up anyway before you first load the patched ROM, and keep your clean Japanese
+          ROM somewhere safe. If your emulator or flashcart pairs <code>.nds</code> and
+          <code>.sav</code> by filename, give both files the same name.
+        </div>
+      </details>
+
+      <details class="limit">
+        <summary>Does this project distribute ROMs?</summary>
+        <div class="ans">
+          No. This project does not distribute ROMs. A pre-patched ROM is your own ROM,
+          patched with our English translation. If a friend wants to play in English, send them
+          here and they make their own.
+        </div>
+      </details>
+    </div>
+  </section>
+
+  </div>
+
+  <section class="final" id="patch">
+    <h2>First steps toward experiencing <span class="accent">SRW L in English</span></h2>
+    <a class="btn" href="patch/">Patch ROM</a>
+    <div class="soon-note" id="patch-soon">Opens the patcher on its own page · nothing is uploaded</div>
+    <div class="small">Clean ROM only · SHA-256 verified</div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="who">Fan translation by <b>andriadhi</b></div>
+  <nav>
+    <button type="button" class="tos-open" id="tos-open">Terms of use</button>
+    <a href="https://github.com/andriadhi/srw-l-translation" rel="noopener">Repository</a>
+    <a href="https://github.com/andriadhi/srw-l-translation/issues/new/choose" rel="noopener">Report a problem</a>
+  </nav>
+</footer>
+
+<dialog class="tos" id="tos" aria-labelledby="tos-title">
+  <div class="tos-bar">
+    <div>
+      <span class="ttl" id="tos-title">Terms of use</span>
+      <span class="ver">version 0 &middot; November 2026</span>
+    </div>
+    <button type="button" class="tos-x" id="tos-close" aria-label="Close terms of use">&times;</button>
+  </div>
+  <div class="tos-body">
+
+    <h3>What this is</h3>
+    <p>This is an English translation patch of Super Robot Wars L for the Nintendo DS.</p>
+    <p>The translation patch is mine. The game is not. You bring your own copy of the Japanese
+       game, and the page assembles an English version of it on your own device. Nothing is
+       uploaded and nothing is stored. There is no account to make and no file to download. It
+       doesn't give you the game, it just lets you read it in English.</p>
+
+    <h3>It's free</h3>
+    <p>Using it costs nothing. There is nothing to buy, nothing to subscribe to, and nothing to
+       unlock.</p>
+
+    <h3>How I'd like you to use it</h3>
+    <p>Come to this page, patch the game you own, and play it. That's the intended path, and it
+       keeps everything in one place where I can fix things and answer questions.</p>
+    <p>The patcher runs in your browser. When you close the tab, the file it made is gone. There
+       is no download on this page. No file the patcher produces leaves your browser, and none is
+       offered to anyone else.</p>
+
+    <h3>Sharing my translation</h3>
+    <p>Please do tell people about this patch. A link to this page is the best way to share it.</p>
+    <p>If you'd rather host it yourself, or build something of your own around it, you're welcome
+       to, as long as these conditions travel with every copy. They attach to what I made, the
+       English text, the graphics I redrew, the work I did:</p>
+    <ul>
+      <li><b>Say who made it.</b> Credit the repository at
+        <a href="https://github.com/andriadhi/srw-l-translation" rel="noopener">github.com/andriadhi/srw-l-translation</a></li>
+      <li><b>Nothing here may be used to earn money.</b> That covers every form it takes: a
+        paywall, a subscription, an ad-supported mirror, a "premium" download link, a paid
+        bundle, hardware sold with the game on it.</li>
+      <li><b>Don't claim it.</b> Don't present my translation as your own work, and don't remove
+        or alter the credit.</li>
+    </ul>
+    <p>If you redistribute my translation in any form, these conditions travel with it. A copy
+       that has lost the name has lost the permission. If one turns up without the credit, I'll
+       ask for it to be fixed. Being relaxed about one copy is not permission for the next.</p>
+
+    <h3>About the patched game</h3>
+    <p>A patched ROM is the game plus my translation. The game in it belongs to Bandai Namco; the
+       English translation is the part I made. I claim nothing in the game, and I don't host or
+       link to a patched ROM.</p>
+    <p>Sharing the finished file is the one thing this page can't help with. If a friend wants to
+       play in English, send them here and they make their own.</p>
+
+    <h3>Back up your copy</h3>
+    <p>Patch a copy, not your only file, and back up your save before you start. If something
+       goes wrong, I can't recover a file I never had.</p>
+
+    <h3>No affiliation</h3>
+    <p>This is an unofficial fan translation. It is not affiliated with, endorsed by, or
+       sponsored by Bandai Namco or anyone else who made or publishes Super Robot Wars L. Super
+       Robot Wars and all related names and characters are trademarks of their respective
+       owners.</p>
+
+    <h3>Questions</h3>
+    <p>If something here is unclear, or you want to do something these terms don't cover, open an
+       issue on the repository at
+       <a href="https://github.com/andriadhi/srw-l-translation/issues" rel="noopener">github.com/andriadhi/srw-l-translation/issues</a>
+       before you do it rather than after.</p>
+
+  </div>
+</dialog>
+
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>

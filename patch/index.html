@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patch your ROM — Super Robot Wars L Translation</title>
+  <meta name="description" content="Patch your own clean Japanese Super Robot Wars L ROM with the English translation, in your browser. Nothing is uploaded.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Patch your ROM — Super Robot Wars L Translation">
+  <meta property="og:description" content="Patch your own clean Japanese Super Robot Wars L ROM with the English translation, in your browser. Nothing is uploaded.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+</head>
+<body class="patch-page">
+
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<div class="rail">
+  <div class="dot"></div>
+  <div class="vl">Super Robot Wars L · Patcher</div>
+  <div class="dot" style="opacity:.3"></div>
+</div>
+
+<main>
+
+  <section class="patch-head">
+    <div class="hero-l">
+      <a class="back-link" href="../">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+        <span>Project page</span>
+      </a>
+      <h1>Patch <span class="accent">your ROM</span></h1>
+    </div>
+  </section>
+
+  <div class="patch-layout">
+  <div class="shell">
+    <div class="panel" id="patcher-panel" role="region" aria-live="polite">
+      <div data-panel-body>
+      <div class="p-head">
+        <div class="l">
+          <h2>Select your ROM</h2>
+          <p>A clean Japanese ROM. Everything happens on your device — nothing is uploaded.</p>
+        </div>
+        <span class="badge">Ready</span>
+      </div>
+
+      <div class="drop" id="drop-zone">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4M12 4l-4 4M12 4l4 4"/><path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+        <b>Drop your ROM here</b>
+        <span>or choose it from your device</span>
+        <input class="rom-input" type="file" id="rom-input" accept=".nds,application/octet-stream" autocomplete="off">
+        <div class="pick">Choose file</div>
+      </div>
+
+      <div class="req">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 9v4M12 17h.01"/><circle cx="12" cy="12" r="9"/></svg>
+        <span id="req-text">Needs about 96 MB of free memory while patching.</span>
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="button" id="patch-btn" data-action="patch" disabled aria-describedby="why1">Patch ROM</button>
+        <span class="hint" id="why1">Choose the right ROM first</span>
+      </div>
+
+      <p class="nojs-note nojs-only">
+        This patcher needs JavaScript, because the work happens inside your browser. Nothing you
+        choose is sent anywhere. If you cannot enable it, this page cannot build the file for you.
+      </p>
+      </div>
+    </div>
+  </div>
+
+  <section class="patch-notes">
+    <div class="note">
+      <h2>What this page does</h2>
+      <ul>
+        <li>Reads the ROM you pick, on your device, and checks it is the exact file this patch
+          supports. If it isn't, you get a specific reason — not a generic error.</li>
+        <li>Builds the English version in your browser and hands the finished file back to you as
+          a download.</li>
+        <li>Uploads nothing. There is no server holding your file and no account to make.</li>
+      </ul>
+    </div>
+    <div class="note">
+      <h2>Before you start</h2>
+      <ul>
+        <li>You need your own clean Japanese ROM of Super Robot Wars L for Nintendo DS. This
+          project does not provide or link to ROMs.</li>
+        <li>Patch a copy, not your only file, and back up your save before you start.</li>
+        <li>Keep the tab open while it works. Leaving mid-process stops it, and the page will
+          warn you first.</li>
+      </ul>
+    </div>
+  </section>
+  </div>
+
+</main>
+
+<footer class="site-foot">
+  <div class="who">Fan translation by <b>andriadhi</b></div>
+  <nav>
+    <a href="../">Project page</a>
+    <a href="https://github.com/andriadhi/srw-l-translation" rel="noopener">Repository</a>
+    <a href="https://github.com/andriadhi/srw-l-translation/issues/new/choose" rel="noopener">Report a problem</a>
+  </nav>
+</footer>
+
+<script type="module" src="../src/patch-main.ts"></script>
+</body>
+</html>

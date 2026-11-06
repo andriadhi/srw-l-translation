@@ -1,0 +1,65 @@
+name: Patcher error
+description: The patcher stopped before it produced a file.
+title: "[patcher] "
+labels: ["patcher-error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Something went wrong before a file was produced. The panel shows a short reason and a
+        code. The code is what makes this report fixable, so please include it.
+
+  - type: input
+    id: code
+    attributes:
+      label: Error code or message
+      description: The text shown in the panel, or in "Technical details" if that is open.
+      placeholder: WRONG_VARIANT
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and version
+      placeholder: Firefox 133 on macOS 15
+    validations:
+      required: true
+
+  - type: dropdown
+    id: source
+    attributes:
+      label: Where did the ROM come from?
+      description: This helps rule out a bad or trimmed dump. Do not attach the file.
+      options:
+        - My own cartridge, dumped myself
+        - Downloaded from an archive
+        - Copied from a flashcart
+        - Something else
+        - Prefer not to say
+    validations:
+      required: true
+
+  - type: input
+    id: size
+    attributes:
+      label: Size of the file you selected, in bytes
+      placeholder: "134217728"
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: What did you do just before it failed?
+      placeholder: Selected the file, the progress bar reached about 60 percent, then this appeared.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you post
+      options:
+        - label: I have not attached a ROM file, a patch file or a save file to this issue.
+          required: true

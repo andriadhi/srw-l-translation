@@ -1,0 +1,50 @@
+:root {
+  --navy: #050d17;
+  --deep: #08192b;
+  --panel: #0d2540;
+  --line: #163a5c;
+  --teal: #22d3ee;
+  --ice: #e8f4ff;
+  --dim: #7c98b3;
+  --amber: #ffb020;
+  --mute: #4d6b85;
+  --alert: #ff5d5d;
+  --ok: #3ddc97;
+
+  --line-soft: rgba(22, 58, 92, 0.55);
+  --line-strong: #24507d;
+  --teal-soft: rgba(34, 211, 238, 0.08);
+  --teal-line: rgba(34, 211, 238, 0.35);
+  --amber-soft: rgba(255, 176, 32, 0.06);
+  --amber-line: rgba(255, 176, 32, 0.38);
+  --amber-text: #ffe6b8;
+  --amber-ink: #ffe0a8;
+  --alert-soft: rgba(255, 93, 93, 0.06);
+  --alert-line: rgba(255, 93, 93, 0.38);
+  --alert-text: #ffd9d9;
+  --ok-soft: rgba(61, 220, 151, 0.08);
+  --ok-line: rgba(61, 220, 151, 0.4);
+  --stage-idle: #2a4a68;
+  --stage-label: #3f5a70;
+
+  --font-body: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --font-display: 'Chakra Petch', var(--font-body);
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --r-sm: 2px;
+  --r-md: 3px;
+  --r-lg: 14px;
+  --r-pill: 999px;
+
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur: 0.2s;
+  --dur-mid: 0.25s;
+  --dur-slow: 0.7s;
+
+  --shadow-panel: 0 30px 80px rgba(0, 0, 0, 0.55);
+  --shadow-stage: 0 40px 100px rgba(0, 0, 0, 0.7);
+  --shadow-shot: 0 44px 110px rgba(0, 0, 0, 0.8);
+  --shadow-btn: 0 16px 40px rgba(34, 211, 238, 0.3);
+  --shadow-btn-soft: 0 14px 34px rgba(34, 211, 238, 0.28);
+}

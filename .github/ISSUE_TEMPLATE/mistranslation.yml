@@ -1,0 +1,66 @@
+name: Mistranslation
+description: Text in the game is wrong, awkward, or runs past the edge of its box.
+title: "[text] "
+labels: ["mistranslation"]
+body:
+  - type: input
+    id: build
+    attributes:
+      label: Which build of the translation?
+      placeholder: version 0
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Where in the game?
+      placeholder: Chapter 9, briefing screen, second paragraph
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: What does it say now?
+      description: Copy the text exactly as it appears, including any line breaks.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: What should it say?
+      description: Your suggested wording. Leave it blank if you only want to flag the problem.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of problem is it?
+      options:
+        - Wrong meaning
+        - Awkward phrasing
+        - Text runs past the edge of its box
+        - Wrong character or unit name
+        - Punctuation or spacing
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshot (optional)
+      description: Drag an image here. Do not attach a ROM or a save file.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you post
+      options:
+        - label: I have not attached a ROM file or a save file to this issue.
+          required: true

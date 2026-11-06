@@ -1,0 +1,198 @@
+.site-foot {
+  border-top:1px solid var(--line);
+  margin-top:clamp(56px,7vw,96px);
+  padding:34px 26px 42px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px 28px;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1540px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.site-foot .who {
+  font-family:"JetBrains Mono",monospace;
+  font-size:11px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--mute);
+}
+.site-foot .who b {
+  color:var(--dim);
+  font-weight:500;
+}
+.site-foot nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 22px;
+  align-items:center;
+}
+.site-foot a,
+.tos-open {
+  font-size:12.5px;
+  color:var(--dim);
+  text-decoration:none;
+  background:none;
+  border:0;
+  padding:0;
+  font-family:inherit;
+  cursor:pointer;
+  border-bottom:1px solid transparent;
+  transition:color .18s,border-color .18s;
+}
+.site-foot a:hover,
+.tos-open:hover {
+  color:var(--teal);
+  border-bottom-color:var(--teal);
+}
+.site-foot a:focus-visible,
+.tos-open:focus-visible {
+  outline:2px solid var(--teal);
+  outline-offset:4px;
+  border-radius:2px;
+}
+dialog.tos {
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:var(--deep);
+  color:var(--ice);
+  width:min(760px,calc(100vw - 32px));
+  height:min(86vh,880px);
+  max-height:calc(100vh - 32px);
+  margin:auto;
+  padding:0;
+  box-shadow:0 30px 90px -20px #000,0 0 0 1px #22d3ee14;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+dialog.tos:not([open]) {
+  display:none;
+}
+dialog.tos::backdrop {
+  background:#02070dcc;
+  backdrop-filter:blur(3px);
+}
+.tos-bar {
+  position:sticky;
+  top:0;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:18px 24px;
+  border-bottom:1px solid var(--line);
+  background:var(--deep);
+}
+.tos-bar .ttl {
+  font-family:"Chakra Petch",sans-serif;
+  font-size:15px;
+  letter-spacing:.02em;
+  color:var(--ice);
+}
+.tos-bar .ver {
+  font-family:"JetBrains Mono",monospace;
+  font-size:10px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--mute);
+  display:block;
+  margin-top:3px;
+}
+.tos-x {
+  flex:0 0 auto;
+  width:34px;
+  height:34px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:var(--panel);
+  color:var(--dim);
+  font-size:17px;
+  line-height:1;
+  cursor:pointer;
+  display:grid;
+  place-items:center;
+  transition:color .18s,border-color .18s;
+}
+.tos-x:hover {
+  color:var(--ice);
+  border-color:var(--teal);
+}
+.tos-x:focus-visible {
+  outline:2px solid var(--teal);
+  outline-offset:2px;
+}
+.tos-body {
+  flex:1 1 auto;
+  min-height:0;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  padding:26px 24px 34px;
+}
+.tos-body h3 {
+  font-family:"Chakra Petch",sans-serif;
+  font-size:13px;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  color:var(--teal);
+  margin:26px 0 10px;
+}
+.tos-body h3:first-child {
+  margin-top:0;
+}
+.tos-body p {
+  font-size:14px;
+  line-height:1.72;
+  color:var(--dim);
+  margin:0 0 12px;
+}
+.tos-body ul {
+  margin:0 0 14px;
+  padding:0;
+  list-style:none;
+}
+.tos-body li {
+  font-size:14px;
+  line-height:1.72;
+  color:var(--dim);
+  padding-left:16px;
+  position:relative;
+  margin-bottom:9px;
+}
+.tos-body li::before {
+  content:"";
+  position:absolute;
+  left:0;
+  top:.72em;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--line);
+}
+.tos-body li b {
+  color:var(--ice);
+  font-weight:600;
+}
+.tos-body a {
+  color:var(--teal);
+  text-decoration:none;
+  border-bottom:1px solid #22d3ee40;
+}
+.tos-body a:hover {
+  border-bottom-color:var(--teal);
+}
+@media (max-width:600px) {
+.site-foot {
+  padding:26px 18px 34px;
+  flex-direction:column;
+  align-items:flex-start;
+}
+.tos-body {
+  padding:20px 18px 28px;
+}
+.tos-bar {
+  padding:15px 18px;
+}
+}

@@ -1,0 +1,82 @@
+# ─── Artefak pengembangan (MUST NOT masuk repo publik) ───────────────────────
+# Repo publik hanya boleh berisi halaman + potongan patch terenkripsi.
+# Semua yang di bawah ini tetap ada di disk, hanya tidak di-commit.
+
+# Dokumen perencanaan & desain
+/specs/
+/.specify/
+/PRODUCT.md
+
+# Artefak mockup (berisi screenshot base64, ~3.6 MB)
+/mockups/
+
+# Konfigurasi tooling agen/desain (bukan bagian produk)
+/.impeccable/
+/.taste-skill/
+/.github/skills/
+
+# Skrip produksi patch — TIDAK didistribusikan (lihat keputusan lisensi)
+/scripts/build-patch-assets.mjs
+/scripts/lib/
+
+# ─── Paket patch mentah (Prinsip III) ────────────────────────────────────────
+# Paket utuh tidak boleh ada di repo pada commit mana pun.
+*.bps
+*.xdelta
+*.ups
+*.ips
+*.vcdiff
+# Arsip yang lazim dipakai untuk membungkus patch
+# (dikecualikan: bukan arsip aset situs)
+#
+# CATATAN: /patch/ TIDAK lagi diabaikan di sini. Folder itu sekarang berisi
+# halaman patcher (`patch/index.html`) — bagian dari situs, bukan paket patch.
+# Paket patch mentah tetap ditolak oleh pola `*.bps` di atas.
+/release/
+/patch-packages/
+
+# ─── Pengujian — TIDAK didistribusikan ──────────────────────────────────────
+# `tests/` sengaja tidak masuk repo. Isinya bukan sekadar test: 
+# `tests/fixtures/encrypted-fixture.ts` adalah SISI ENKRIPSI produksi —
+# resep lengkap membuat paket patch (AES-GCM-256, IV prefix + index,
+# AAD, turunan kunci HKDF, ukuran potongan, pola nama file). `src/` hanya
+# berisi sisi DEKRIPSI, karena browser hanya perlu mendekripsi.
+#
+# Produk proyek ini adalah patch gamenya, bukan halaman ini. Mempublikasikan
+# resep enkripsi membuat siapa pun bisa merakit paket patch sendiri yang lolos
+# semua validasi — perlindungannya jadi tidak berarti.
+/tests/
+
+# ─── Hasil build & dependensi ────────────────────────────────────────────────
+/dist/
+/node_modules/
+/.vite/
+
+# ─── Sisa OS / editor ────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# ─── ROM & berkas biner besar (JANGAN pernah masuk repo) ─────────────────────
+# ROM base, ROM hasil patch, dan arsip apa pun yang memuat isi game.
+*.nds
+*.sav
+*.dsv
+/5336*
+
+# Folder kerja sementara (referensi ROM, eksperimen, hasil uji lokal)
+/.work/
+# Artefak uji lokal saja. Folder /public/p/ sendiri HARUS tetap ter-track:
+# kontrak patch-protection.md §3 (opsi A) mewajibkan potongan patch asli
+# di-commit ke `main` per rilis, satu commit = satu keadaan rilis. Kalau
+# seluruh folder di-ignore, rilis akan "berhasil" build tapi situsnya
+# terbit tanpa potongan — gagal diam-diam.
+/public/p/_fixture-rom.bin
+
+# ─── Catatan kerja lokal ─────────────────────────────────────────────────────
+/docs/local-notes/
+*.local.md
+
+# Folder publish bersih — repo induk tidak mengunggah salinan ini.
+/github-upload/
